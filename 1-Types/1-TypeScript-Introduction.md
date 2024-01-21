@@ -8,7 +8,7 @@ TypeScript is a statically-typed superset of JavaScript that offers several powe
 
 - **Optional Typing**: You can choose when and where to use type annotations, making TypeScript flexible and easy to adopt in existing JavaScript projects.
 
-- **Improved Tooling**: TypeScript provides robust tooling and code analysis through IDEs and editors, making code navigation and refactoring more efficient.
+- **Improved Tooling**: TypeScript provides tooling and code analysis through IDEs and editors, making code navigation and refactoring more efficient.
 
 - **Compatibility**: TypeScript code compiles to plain JavaScript, ensuring compatibility with all JavaScript environments and libraries.
 
