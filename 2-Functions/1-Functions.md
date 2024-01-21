@@ -62,7 +62,7 @@ function trueOrFalse(age: number) {
   return age > 30 ? 'true' : 'false';
 }
 
-const myAnswer : boolean = factOrFiction(); 
+const myAnswer : boolean = trueOrFalse(); 
 // Type 'string' is not assignable to type 'boolean'
 ```
 

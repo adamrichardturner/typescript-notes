@@ -9,7 +9,8 @@ If we assign a string to a mutable variable and try to re-assign it to a number,
 ```typescript
 let name = 'Adam';
 
-first = 1988; // Type 'number' is not assignable to type 'string'
+first = 1988; 
+// Type 'number' is not assignable to type 'string'
 ```
 
 ## Any
