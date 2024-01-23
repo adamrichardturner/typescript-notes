@@ -1,5 +1,11 @@
 # Types in TypeScript
 
+In TypeScript, type inference automatically determines the data type of a variable based on its initial value, leading to type errors if a different type is assigned later.
+
+The any type allows for flexibility, as variables declared with it can hold values of any type without type safety constraints. TypeScript supports all JavaScript primitive types (like numbers, strings, booleans, null, undefined, Symbol, and BigInt), treating them as immutable values without methods or properties.
+
+TypeScript also tracks the "shape" of objects, meaning it checks for the existence of properties and methods on objects, and will raise errors if non-existent properties are accessed or incorrectly spelled.
+
 ## Type Inference
 
 Type inference ensures the expected type of a variable matches the data type bound to the variable when first declared.
@@ -7,9 +13,9 @@ Type inference ensures the expected type of a variable matches the data type bou
 If we assign a string to a mutable variable and try to re-assign it to a number, TypeScript will log a complaint that the new value cannot be assigned because it is expecting the initial data type.
 
 ```typescript
-let name = 'Adam';
+let name = 'Adam'
 
-first = 1988; 
+first = 1988
 // Type 'number' is not assignable to type 'string'
 ```
 
@@ -18,16 +24,16 @@ first = 1988;
 If no initial value is assigned to a variable, TypeScript considers it to be of type **any**. A variable of this type can be reassigned to any data type without error.
 
 ```typescript
-let name;
-first = 'Adam';
-first = 1988;
+let name
+first = 'Adam'
+first = 1988
 ```
 
 The above will not produce any errors or warnings, and the variable can be used without type safety throughout the program.
 
 ## Primitive Types
 
-A primitive data type in JavaScript is a basic data type that represents a single immutable value, such as numbers, strings, booleans, null, and undefined. 
+A primitive data type in JavaScript is a basic data type that represents a single immutable value, such as numbers, strings, booleans, null, and undefined.
 
 They are not objects and do not have methods or properties.
 
@@ -35,25 +41,25 @@ All primitive or built-in data types in JavaScript are present in TypeScript.
 
 ```typescript
 // Number (numeric data type)
-const age = 35; 
+const age = 35
 
 // String (textual data type)
-const name = "Adam"; 
+const name = 'Adam'
 
 // Boolean (true or false)
-const isStudent = false; 
+const isStudent = false
 
 // Undefined (represents the absence of a value)
-let city; 
+let city
 
 // Null (represents the intentional absence of any object value)
-const car = null; 
+const car = null
 
 // Symbol (unique and immutable values, often used as object keys)
-const uniqueSymbol = Symbol("description"); 
+const uniqueSymbol = Symbol('description')
 
 // BigInt (used for very large integers)
-const bigIntValue = 1234567890123456789012345678901234567890n; 
+const bigIntValue = 1234567890123456789012345678901234567890n
 ```
 
 ## Shape of an Object
@@ -61,10 +67,9 @@ const bigIntValue = 1234567890123456789012345678901234567890n;
 TypeScript is aware of the **shape of an object** - what properties it does or does not contain. TypeScript logs errors and suggestions if we try to access properties that don't exist on the object.
 
 ```typescript
-let firstName = 'muriel!';
+let firstName = 'muriel!'
 
-console.log(firstName.toUppercase()); 
+console.log(firstName.toUppercase())
 
 // error: Property 'toUppercase' does not exist on type 'string'. Did you mean 'toUpperCase'?
 ```
-
