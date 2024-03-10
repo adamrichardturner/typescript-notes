@@ -13,7 +13,7 @@ let typedAnswer: string | number // union type
 
 ## Union Type
 
-TypeScript allows you to use an `any` type that can be assigned to a ariable whose type is not specific, allowing for 'any' type.
+TypeScript allows you to use an `any` type that can be assigned to a variable whose type is not specific, allowing for 'any' type.
 
 TypeScript also allows us to define **union types** that is a composite of selected types separated by a vertical bar `|` also known as a pipe.
 
